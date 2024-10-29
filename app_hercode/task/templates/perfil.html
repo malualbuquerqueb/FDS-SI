@@ -1,0 +1,18 @@
+{% extends 'menu.html' %} {% block content %}
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2>Perfil de {{ user.first_name }} {{ user.last_name }}</h2>
+      <p><strong>Nome completo:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+      <p><strong>Nome de usuário:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+    <div class="card-footer">
+      <a href="edit_perfil.html" class="btn btn-primary btn-block mb-2">Editar Perfil</a>
+      <a href="{% url 'delete-account' %}" class="btn btn-danger btn-block mb-2">Deletar Conta</a>
+      <a href="{% url 'sair' %}" class="btn btn-warning btn-block mb-2">Logout</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
