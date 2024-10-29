@@ -90,54 +90,31 @@ Por outro lado, ao trabalharmos em duplas, focamos mais nos comandos do Git, com
 ---
 
 ## Como execultar o projeto 
-> **Nota:** Este guia descreve como clonar e configurar o projeto HerCode em sua máquina local.
+> **Nota:** Este guia descreve como clonar e configurar o projeto HerCode em sua máquina.
 
 ### Pré-requisitos
 
 - **Python 3.x**: Certifique-se de ter o Python 3.x instalado.
+- **Django admin**: Certifique-se de ter o Django instalado.
 - **Git**: Necessário para clonar o repositório.
-- **Virtualenv** (opcional, mas recomendado): Para criar um ambiente virtual isolado.
 
 ### Passo a Passo
+No terminal do VSCode faça: 
 
 ```bash
 # Passo 1: Clonar o Repositório
-git clone https://github.com/seu-usuario/hercode.git
+git clone https://github.com/malualbuquerqueb/FDS-SI
 #Isso criará uma cópia do repositório na pasta atual. Navegue até o diretório do projeto:
 
-# 2. Acesse a pasta do projeto:
-cd hercode
+# Passo 2: Acesse a pasta do projeto:
+cd app_hercode
 
-#Passo 3: Criar e Ativar um Ambiente Virtual
-#Crie um ambiente virtual com o seguinte comando (opcional, mas recomendado):
-python -m venv venv
-
-# Passo 4: Ative o ambiente virtual:
-Windows:
-venv\Scripts\activate
-#ou 
-macOS/Linux:
-source venv/bin/activate
-
-# Passo 5: Instalar as Dependências
-#Com o ambiente virtual ativo, instale as dependências necessárias para o projeto:
-pip install -r requirements.txt
-
-# Passo 6: Configurar o Banco de Dados
-#O HerCode utiliza o banco de dados SQLite. Para configurá-lo, execute as migrações:
-python manage.py migrate
-
-# Passo 7: Criar um Superusuário (opcional)
-#Se desejar acessar o painel de administração do Django, crie um superusuário:
-python manage.py createsuperuser
-#Siga as instruções para definir um nome de usuário, email e senha.
-
-# Passo 8: Executar o Servidor Local
+# Passo 3: Executar o Servidor Local
 #Inicie o servidor local do Django com o comando:
 python manage.py runserver
 # O servidor estará acessível em http://127.0.0.1:8000/. Abra este endereço em seu navegador para acessar o HerCode localmente.
 
-# Passo 9: Acessar o Projeto
+# Passo 4: Acessar o Projeto
 #Para acessar o sistema e explorar suas funcionalidades:
 URL Principal: http://127.0.0.1:8000/
 Admin (caso tenha criado um superusuário): http://127.0.0.1:8000/admin
